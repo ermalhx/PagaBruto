@@ -1,0 +1,17 @@
+try:
+    PagaNeto = int(input("Sa eshte paga neto? "))
+
+    if PagaNeto <= 26640:
+	    PagaBruto = PagaNeto/(1-0.112)
+	    print(PagaBruto)
+    elif PagaNeto > 26640 and PagaNeto < 90819.86:
+	    PagaBruto = (PagaNeto - (30000*0.13))/(1-0.095-0.017-0.13)
+	    print(PagaBruto)
+    elif PagaNeto >= 90819.86 and PagaNeto < 120956.35:
+        PagaBruto = ((PagaNeto + (114670 * 0.095)) - (30000 * 0.13)) / (1 - 0.017 - 0.13)
+        print(PagaBruto)
+    elif PagaNeto > 120956.35:
+        PagaBruto = (PagaNeto - (150000 * 0.23) + (114670 * 0.095) + 15600) / (1 - 0.017 - 0.23)
+        print(PagaBruto)
+except:
+    print("Paga neto nuk eshte vendosur e sakte. Kontrollo dhe njehere")
